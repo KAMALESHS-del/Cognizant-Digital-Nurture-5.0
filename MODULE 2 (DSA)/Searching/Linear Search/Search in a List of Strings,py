@@ -1,0 +1,7 @@
+names = ["Ram", "John", "Alice", "Bob"]
+target = "Alice"
+
+for i in range(len(names)):
+    if names[i] == target:
+        print("Found at", i)
+        break
