@@ -34,22 +34,26 @@ Merge
 [2,3,4,5,8]
 
 
-"Algorithm"
+# Merge Sort Algorithm
 
-Start.
-If the array has 0 or 1 element, return because it is already sorted.
-Find the middle index of the array.
-Divide the array into two halves:
-Left half
-Right half
-Recursively apply Merge Sort to the left half.
-Recursively apply Merge Sort to the right half.
-Merge the two sorted halves:
-Compare the first element of both halves.
-Copy the smaller element into the original array.
-Move the pointer of the copied element.
-Repeat until one half is exhausted.
-Copy any remaining elements from the left half.
-Copy any remaining elements from the right half.
-Return the sorted array.
-Stop.
+## Algorithm
+
+1. Start.
+2. If the array contains **0 or 1 element**, it is already sorted. Return the array.
+3. Find the middle index of the array.
+4. Divide the array into two halves:
+   - Left Half
+   - Right Half
+5. Recursively apply Merge Sort to the left half.
+6. Recursively apply Merge Sort to the right half.
+7. Merge the two sorted halves:
+   - Compare the first elements of both halves.
+   - Copy the smaller element into the original array.
+   - Move the corresponding pointer.
+   - Repeat until one half is exhausted.
+8. Copy any remaining elements from the left half.
+9. Copy any remaining elements from the right half.
+10. Return the sorted array.
+11. Stop.
+
+
