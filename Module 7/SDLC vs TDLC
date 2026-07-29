@@ -1,1 +1,536 @@
+# Module: SDLC vs TDLC (STLC), V-Model & Agile QA Approach
+
+## Overview
+
+Software development is a structured process that transforms an idea into a working software product. To ensure quality, testing is integrated throughout development. Two important life cycles are:
+
+* **SDLC (Software Development Life Cycle):** Focuses on developing software.
+* **STLC (Software Testing Life Cycle)** *(sometimes mistakenly written as TDLC in some course materials)*: Focuses on planning, designing, executing, and managing software testing.
+
+Together, they help deliver reliable, high-quality software.
+
+---
+
+# 1. Software Development Life Cycle (SDLC)
+
+## What is SDLC?
+
+Software Development Life Cycle (SDLC) is a structured process used to design, develop, test, deploy, and maintain software efficiently.
+
+### Objectives
+
+* Deliver high-quality software.
+* Complete projects on time and within budget.
+* Meet customer requirements.
+* Reduce project risks.
+
+---
+
+## Phases of SDLC
+
+### Phase 1: Requirement Analysis
+
+Business analysts gather customer requirements.
+
+**Activities**
+
+* Meet stakeholders.
+* Collect functional requirements.
+* Collect non-functional requirements.
+* Prepare Software Requirement Specification (SRS).
+
+**Output**
+
+* SRS Document
+
+---
+
+### Phase 2: Planning
+
+Project planning begins.
+
+**Activities**
+
+* Estimate cost.
+* Allocate resources.
+* Schedule tasks.
+* Identify project risks.
+
+**Output**
+
+* Project Plan
+
+---
+
+### Phase 3: System Design
+
+Software architecture is prepared.
+
+**Activities**
+
+* Database design
+* UI design
+* System architecture
+* API design
+
+**Output**
+
+* Design Document (HLD & LLD)
+
+---
+
+### Phase 4: Development (Coding)
+
+Developers write the application code.
+
+**Activities**
+
+* Write source code
+* Review code
+* Perform unit testing
+
+**Output**
+
+* Working software modules
+
+---
+
+### Phase 5: Testing
+
+QA team verifies the software.
+
+**Activities**
+
+* Prepare test cases
+* Execute tests
+* Report defects
+* Perform regression testing
+
+**Output**
+
+* Tested software
+
+---
+
+### Phase 6: Deployment
+
+Software is released to users.
+
+**Activities**
+
+* Install software
+* Configure servers
+* Release to production
+
+---
+
+### Phase 7: Maintenance
+
+Software is monitored after release.
+
+**Activities**
+
+* Bug fixing
+* Performance improvements
+* Security updates
+* Feature enhancements
+
+---
+
+## SDLC Diagram
+
+```text
+Requirement Analysis
+        ↓
+Planning
+        ↓
+System Design
+        ↓
+Development
+        ↓
+Testing
+        ↓
+Deployment
+        ↓
+Maintenance
+```
+
+---
+
+# 2. STLC (Software Testing Life Cycle)
+
+## What is STLC?
+
+Software Testing Life Cycle (STLC) is the sequence of activities carried out by the QA team to ensure software quality.
+
+### Objectives
+
+* Detect defects early.
+* Improve product quality.
+* Verify software meets requirements.
+* Deliver defect-free software.
+
+---
+
+## Phases of STLC
+
+### Phase 1: Requirement Analysis
+
+QA studies the requirements.
+
+**Activities**
+
+* Understand business requirements.
+* Identify testable requirements.
+* Clarify ambiguities.
+
+**Deliverable**
+
+* Requirement Traceability Matrix (RTM)
+
+---
+
+### Phase 2: Test Planning
+
+QA Manager prepares the testing strategy.
+
+**Activities**
+
+* Select testing tools.
+* Estimate testing effort.
+* Assign resources.
+* Define testing schedule.
+
+**Deliverable**
+
+* Test Plan
+
+---
+
+### Phase 3: Test Case Development
+
+QA engineers create test cases.
+
+**Activities**
+
+* Write test cases.
+* Prepare test data.
+* Review test cases.
+
+**Deliverable**
+
+* Test Cases
+* Test Data
+
+---
+
+### Phase 4: Test Environment Setup
+
+Testing environment is prepared.
+
+**Activities**
+
+* Configure servers.
+* Install software.
+* Verify environment readiness.
+
+---
+
+### Phase 5: Test Execution
+
+QA executes test cases.
+
+**Activities**
+
+* Run tests.
+* Record results.
+* Report defects.
+* Retest fixes.
+
+---
+
+### Phase 6: Defect Reporting & Tracking
+
+Defects are logged and monitored.
+
+**Activities**
+
+* Assign bugs.
+* Verify fixes.
+* Reopen defects if needed.
+
+---
+
+### Phase 7: Test Closure
+
+Testing activities are completed.
+
+**Activities**
+
+* Prepare test summary report.
+* Measure testing metrics.
+* Document lessons learned.
+
+---
+
+## STLC Diagram
+
+```text
+Requirement Analysis
+        ↓
+Test Planning
+        ↓
+Test Case Development
+        ↓
+Environment Setup
+        ↓
+Test Execution
+        ↓
+Defect Reporting
+        ↓
+Test Closure
+```
+
+---
+
+# 3. SDLC vs STLC Comparison
+
+| Feature      | SDLC                            | STLC                        |
+| ------------ | ------------------------------- | --------------------------- |
+| Full Form    | Software Development Life Cycle | Software Testing Life Cycle |
+| Purpose      | Develop software                | Test software               |
+| Focus        | Development                     | Quality Assurance           |
+| Performed By | Developers, Architects, BA      | QA Engineers                |
+| Starts With  | Requirements                    | Requirement Analysis        |
+| Ends With    | Maintenance                     | Test Closure                |
+| Main Output  | Software Product                | Quality Report              |
+
+---
+
+# 4. V-Model
+
+## What is the V-Model?
+
+The **V-Model (Verification and Validation Model)** is an SDLC model where every development phase has a corresponding testing phase. Testing activities are planned early, improving quality and reducing defects.
+
+---
+
+## Verification
+
+Checks whether the software is being built correctly.
+
+Examples:
+
+* Requirement review
+* Design review
+* Code review
+
+---
+
+## Validation
+
+Checks whether the correct software has been built.
+
+Examples:
+
+* Unit Testing
+* Integration Testing
+* System Testing
+* Acceptance Testing
+
+---
+
+## V-Model Diagram
+
+```text
+Verification                      Validation
+
+Requirement Analysis      ↔     Acceptance Testing
+
+System Design             ↔     System Testing
+
+Architecture Design       ↔     Integration Testing
+
+Module Design             ↔     Unit Testing
+
+            Coding
+```
+
+---
+
+## Advantages of V-Model
+
+* Early defect detection.
+* Better planning.
+* Improved software quality.
+* Simple and easy to understand.
+* Strong documentation.
+
+---
+
+## Disadvantages
+
+* Less flexible for changing requirements.
+* Costly if requirements change frequently.
+* Not ideal for highly dynamic projects.
+
+---
+
+# 5. QA Integration Points in SDLC
+
+Quality Assurance should be involved throughout the SDLC, not only during testing.
+
+| SDLC Phase           | QA Activities                                             |
+| -------------------- | --------------------------------------------------------- |
+| Requirement Analysis | Review requirements, identify ambiguities, prepare RTM    |
+| Planning             | Estimate testing effort, define test strategy             |
+| Design               | Review architecture, identify test scenarios              |
+| Development          | Review code, prepare test cases, support unit testing     |
+| Testing              | Execute tests, report defects, perform regression testing |
+| Deployment           | Verify release, perform smoke testing                     |
+| Maintenance          | Test bug fixes, perform regression testing                |
+
+### Benefits of Early QA Involvement
+
+* Finds defects earlier.
+* Reduces development cost.
+* Improves communication.
+* Produces higher-quality software.
+* Speeds up releases.
+
+---
+
+# 6. Agile QA Approach
+
+## What is Agile QA?
+
+In Agile development, testing is continuous and happens throughout the project instead of only at the end. QA engineers work closely with developers, product owners, and stakeholders.
+
+---
+
+## Agile Testing Principles
+
+* Test early and often.
+* Continuous feedback.
+* Customer collaboration.
+* Frequent releases.
+* Team responsibility for quality.
+
+---
+
+## Agile QA Workflow
+
+```text
+Sprint Planning
+       ↓
+Development
+       ↓
+Continuous Testing
+       ↓
+Bug Fixing
+       ↓
+Regression Testing
+       ↓
+Sprint Review
+       ↓
+Release
+```
+
+---
+
+## Responsibilities of QA in Agile
+
+* Participate in sprint planning.
+* Review user stories.
+* Create test cases.
+* Perform manual and automated testing.
+* Execute regression testing.
+* Report defects quickly.
+* Verify completed stories.
+* Collaborate with developers daily.
+
+---
+
+## Advantages of Agile QA
+
+* Faster defect detection.
+* Continuous quality improvement.
+* Quicker software releases.
+* Better communication.
+* Easier adaptation to requirement changes.
+
+---
+
+## Challenges
+
+* Frequent requirement changes.
+* Tight sprint deadlines.
+* Continuous regression testing.
+* Maintaining automated test suites.
+
+---
+
+# Real-Time Example
+
+**Project:** Online Food Delivery App
+
+### SDLC
+
+1. Gather requirements (restaurant listings, ordering, payment).
+2. Plan project timeline.
+3. Design UI and database.
+4. Develop features.
+5. Test login, ordering, and payment.
+6. Deploy the app.
+7. Maintain and release updates.
+
+### STLC
+
+1. Analyze requirements.
+2. Prepare a test plan.
+3. Write test cases for login, search, cart, and payment.
+4. Set up the test environment.
+5. Execute test cases.
+6. Report and verify defects.
+7. Close testing with a summary report.
+
+### Agile QA
+
+* Test new features during each sprint.
+* Run regression tests after every code change.
+* Collaborate daily with developers.
+* Release updates frequently.
+
+---
+
+# Interview Questions
+
+1. What is SDLC?
+2. What is STLC?
+3. What are the phases of SDLC?
+4. What are the phases of STLC?
+5. Differentiate between SDLC and STLC.
+6. What is the V-Model?
+7. What is the difference between Verification and Validation?
+8. Why should QA be involved early in SDLC?
+9. What are QA integration points in SDLC?
+10. What is Agile QA?
+11. How is testing performed in Agile?
+12. What are the advantages of the V-Model?
+13. What are the disadvantages of the V-Model?
+14. Why is regression testing important in Agile?
+15. What is the role of a QA engineer during a sprint?
+
+---
+
+# Key Points to Remember
+
+* **SDLC** focuses on developing software, while **STLC** focuses on testing software.
+* SDLC phases are: **Requirement Analysis → Planning → Design → Development → Testing → Deployment → Maintenance**.
+* STLC phases are: **Requirement Analysis → Test Planning → Test Case Development → Environment Setup → Test Execution → Defect Reporting → Test Closure**.
+* The **V-Model** maps each development phase to a corresponding testing phase, enabling early test planning.
+* **Verification** checks whether the product is built correctly; **Validation** checks whether the correct product has been built.
+* QA should participate in every SDLC phase to identify issues early and improve quality.
+* In **Agile QA**, testing is continuous, collaborative, and integrated into every sprint.
+* Early testing reduces costs, minimizes defects, and improves overall software quality.
 
