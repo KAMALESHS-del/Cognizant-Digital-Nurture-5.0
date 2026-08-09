@@ -1,1 +1,103 @@
+ACID properties
 
+1.A → Atomicity
+
+"All or Nothing"
+
+A transaction must be completed completely or not happen at all.
+
+Example: Bank transfer ₹100 from A to B.
+
+A → ₹100 deducted
+B → ₹100 added
+
+If adding ₹100 to B fails, the deduction from A is also rolled back.
+
+
+2.Consistency – Example Code
+
+Consistency means a transaction must follow all database rules/constraints and leave the database in a valid state.
+
+Example: Bank Transfer
+
+Suppose:
+
+Account A = ₹1000
+Account B = ₹500
+
+Transfer ₹200 from A to B.
+
+START TRANSACTION;
+
+UPDATE Account
+SET balance = balance - 200
+WHERE id = 1 AND balance >= 200;
+
+UPDATE Account
+SET balance = balance + 200
+WHERE id = 2;
+
+COMMIT;
+Before transaction
+A = ₹1000
+B = ₹500
+Total = ₹1500
+After transaction
+A = ₹800
+B = ₹700
+Total = ₹1500
+
+The total money remains ₹1500, so the database stays consistent.
+
+3.Isolation in DBMS
+
+Isolation means that when multiple transactions execute at the same time, one transaction should not incorrectly affect another transaction.
+
+
+Example: Bank Account
+
+Suppose account balance is ₹1000.
+
+Two transactions run at the same time:
+
+Transaction T1 → Withdraw ₹500
+Transaction T2 → Withdraw ₹700
+
+If both transactions read ₹1000 at the same time:
+
+T1 reads → ₹1000
+T2 reads → ₹1000
+
+T1 withdraws ₹500 → ₹500
+T2 withdraws ₹700 → ₹300 ❌
+
+This is incorrect because the account does not have enough money for both withdrawals.
+
+With Isolation, the transactions are controlled so that one transaction completes before the other can make an invalid decision.
+
+
+Durability in DBMS
+
+Durability means:
+
+Once a transaction is committed, its changes are permanently saved, even if the system crashes or power goes off.
+
+
+
+Interview Definition
+
+A primary key is a column or set of columns that uniquely identifies each row in a table and cannot contain NULL or duplicate values.
+
+
+A Foreign Key is a column in one table that refers to the Primary Key of another table.
+
+Its main purpose is to connect two tables and maintain referential integrity.
+
+1. ON DELETE CASCADE 🗑️
+
+If the parent record is deleted, related child records are automatically deleted.
+
+
+2. ON DELETE SET NULL
+
+If the parent record is deleted, the child's foreign key is changed to NULL instead of deleting the child record.
