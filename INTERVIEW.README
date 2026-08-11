@@ -101,3 +101,7 @@ If the parent record is deleted, related child records are automatically deleted
 2. ON DELETE SET NULL
 
 If the parent record is deleted, the child's foreign key is changed to NULL instead of deleting the child record.
+
+
+
+
